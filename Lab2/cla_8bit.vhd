@@ -1,0 +1,39 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity cla_8bit is
+  port( CLK : in std_logic;
+	A, B	: in std_logic_vector(7 downto 0);
+	Subtraction	: in std_logic;
+	S			: out std_logic_vector(7 downto 0);
+	Cout		: out std_logic);
+end entity;
+
+architecture cla_8bit_arch of cla_8bit is
+
+  component cla_4bit is
+    port( A, B 	: in std_logic_vector(3 downto 0);
+	  Cin		: in std_logic;
+	  S    		: out std_logic_vector(3 downto 0);
+	  Cout 		: out std_logic);
+  end component;
+
+  signal newB : std_logic_vector(7 downto 0);
+  signal C  : std_logic;
+
+  begin
+
+  newB(0) <= B(0) xor Subtraction;
+  newB(1) <= B(1) xor Subtraction;
+  newB(2) <= B(2) xor Subtraction;
+  newB(3) <= B(3) xor Subtraction;
+  newB(4) <= B(4) xor Subtraction;
+  newB(5) <= B(5) xor Subtraction;
+  newB(6) <= B(6) xor Subtraction;
+  newB(7) <= B(7) xor Subtraction;
+
+  cla0 : cla_4bit port map(A => A(3 downto 0), B => newB(3 downto 0), Cin => Subtraction, Cout => C, S => S(3 downto 0));
+  cla1 : cla_4bit port map(A => A(7 downto 4), B => newB(7 downto 4), Cin => C, Cout => Cout, S=> S(7 downto 4));
+
+
+end architecture;

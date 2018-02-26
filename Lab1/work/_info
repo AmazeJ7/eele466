@@ -1,0 +1,129 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/17.1
+T_opt
+!s110 1516132578
+VK7lKOb:7RXk?C5]gdHHg>1
+Z1 04 23 28 work ripple_carry_adder_8bit ripple_carry_adder_8bit_arch 1
+=1-1866da25e586-5a5e58e2-1d4-3490
+Z2 o-quiet -auto_acc_if_foreign -work work
+Z3 tCvgOpt 0
+n@_opt
+Z4 OL;O;10.5c;63
+R0
+T_opt1
+!s110 1516135549
+Va1JG5950C>:Y7iKQz?_Vd3
+R1
+=1-1866da25e586-5a5e647d-1b8-3114
+R2
+R3
+n@_opt1
+R4
+R0
+T_opt2
+!s110 1516135603
+V9`U@n`BnXY0T<V`PhPhJU3
+R1
+=1-1866da25e586-5a5e64b3-2a7-1978
+R2
+R3
+n@_opt2
+R4
+Efull_adder
+Z5 w1516132195
+Z6 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z7 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z8 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z9 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z10 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z11 dC:/EELE466/Lab1
+Z12 8C:/EELE466/Lab1/Full_adder.vhd
+Z13 FC:/EELE466/Lab1/Full_adder.vhd
+l0
+L6
+VGLRmnP[WW_`QRKVZga7C02
+!s100 MBDLj98l9H<bcJzog0XmW1
+Z14 OV;C;10.5b;63
+32
+Z15 !s110 1516133130
+!i10b 1
+Z16 !s108 1516133130.000000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EELE466/Lab1/Full_adder.vhd|
+Z18 !s107 C:/EELE466/Lab1/Full_adder.vhd|
+!i113 1
+Z19 o-work work -2002 -explicit
+Z20 tExplicit 1 CvgOpt 0
+Afull_adder_arch
+R6
+R7
+R8
+R9
+R10
+DEx4 work 10 full_adder 0 22 GLRmnP[WW_`QRKVZga7C02
+l14
+L12
+VoJ3;4?73GCbMJE5`CJz<40
+!s100 iTl;gf?P8^VhORHdT@2QN1
+R14
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R19
+R20
+Eripple_carry_adder_8bit
+Z21 w1516130342
+R6
+R7
+R8
+R9
+R10
+R11
+Z22 8C:/EELE466/Lab1/Ripple_carry_adder_8bit.vhd
+Z23 FC:/EELE466/Lab1/Ripple_carry_adder_8bit.vhd
+l0
+L6
+VzfeV0:@0iKi30RB0JW4;70
+!s100 kNg``[k56LC2?eHEGOP<=3
+R14
+32
+R15
+!i10b 1
+R16
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EELE466/Lab1/Ripple_carry_adder_8bit.vhd|
+Z25 !s107 C:/EELE466/Lab1/Ripple_carry_adder_8bit.vhd|
+!i113 1
+R19
+R20
+Aripple_carry_adder_8bit_arch
+R6
+R7
+R8
+R9
+R10
+DEx4 work 23 ripple_carry_adder_8bit 0 22 zfeV0:@0iKi30RB0JW4;70
+l25
+L14
+VokGbaMJ`W[172?ZlGa6N90
+!s100 <aI`O<>jAddF^BS;;eJNd3
+R14
+32
+R15
+!i10b 1
+R16
+R24
+R25
+!i113 1
+R19
+R20

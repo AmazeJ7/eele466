@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fixed-Point Report for Madgwick_correction</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+	body { font-family: monospace; }
+	h2 { font-family: Arial, Helvetica, sans-serif; color: #990000; margin-top: 50px; }
+	table,th,td { border: 1px solid black; }
+	table { margin-top: 30px; }
+	th { align: center; font-weight: bold; }
+	tr.h { background-color: #99CCFF; }
+	tr.a { background-color: #EEEEFF; }
+	tr.b { background-color: #FFFFFF; }
+	tr.c { background-color: #FFA500; }
+	tr.a td, tr.b td { border-style: none; }
+	td.left { text-align: left; }
+	td.right { text-align: right; }
+	td.center { text-align: center; }
+	td.bold { font-weight: bold; }
+	pre { padding: 0px; margin: 0px; }
+	span { font-style: italic; }
+	.code, .code tr, .code th, .code td { border: none; border-collapse: collapse; }
+	.padd { padding-left: 5px; }
+	td.cov, th.cov { width: 50px; height: 20px; text-align: center; font-weight: bold; border-right: 2px solid black; cell-spacing: 0px; }
+	td.cov { vertical-align: top; }
+	td.black { color: #000000; font-weight: bold; padding-top: 4px; }
+	td.white { color: #FFFFFF; font-weight: bold; padding-top: 4px; }
+	.code th { font-weight: bold; border-bottom: 2px solid black; }
+</style>
+</head>
+<body>
+<h3>Generated on  2018-02-06 13:16:14</h3>
+<p>The following table shows fixed point instrumentation results</p>
+<h2>Fixed-Point Report <span>Madgwick_correction<span></h2>
+<TABLE class="code">
+<TR>
+<TH class="cov padd">Simulation Coverage</TH>
+<TH>Code</TH>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>function [s0, s1, s2, s3] = Madgwick_correction(q0, q1, q2, q3, ax, ay, az, mx, my, mz)
+% Auxiliary variables to avoid repeated arithmetic
+v2q0mx = 2.0 * q0 * mx;
+v2q0my = 2.0 * q0 * my;
+v2q0mz = 2.0 * q0 * mz;
+v2q1mx = 2.0 * q1 * mx;
+v2q0 = 2.0 * q0;
+v2q1 = 2.0 * q1;
+v2q2 = 2.0 * q2;
+v2q3 = 2.0 * q3;
+v2q0q2 = 2.0 * q0 * q2;
+v2q2q3 = 2.0 * q2 * q3;
+q0q0 = q0 * q0;
+q0q1 = q0 * q1;
+q0q2 = q0 * q2;
+q0q3 = q0 * q3;
+q1q1 = q1 * q1;
+q1q2 = q1 * q2;
+q1q3 = q1 * q3;
+q2q2 = q2 * q2;
+q2q3 = q2 * q3;
+q3q3 = q3 * q3;
+
+% Reference direction of Earth's magnetic field
+hx = mx * q0q0 - v2q0my * q3 + v2q0mz * q2 + mx * q1q1 + v2q1 * my * q2 + v2q1 * mz * q3 - mx * q2q2 - mx * q3q3;
+hy = v2q0mx * q3 + my * q0q0 - v2q0mz * q1 + v2q1mx * q2 - my * q1q1 + my * q2q2 + v2q2 * mz * q3 - my * q3q3;
+v2bx = sqrt(hx * hx + hy * hy);
+v2bz = -v2q0mx * q2 + v2q0my * q1 + mz * q0q0 + v2q1mx * q3 - mz * q1q1 + v2q2 * my * q3 - mz * q2q2 + mz * q3q3;
+v4bx = 2.0 * v2bx;
+v4bz = 2.0 * v2bz;
+
+% Gradient decent algorithm corrective step
+s0 = -v2q2 * (2.0 * q1q3 - v2q0q2 - ax) + v2q1 * (2.0 * q0q1 + v2q2q3 - ay) - v2bz * q2 * (v2bx * (0.5 - q2q2 - q3q3) + v2bz * (q1q3 - q0q2) - mx) + (-v2bx * q3 + v2bz * q1) * (v2bx * (q1q2 - q0q3) + v2bz * (q0q1 + q2q3) - my) + v2bx * q2 * (v2bx * (q0q2 + q1q3) + v2bz * (0.5 - q1q1 - q2q2) - mz);
+s1 =  v2q3 * (2.0 * q1q3 - v2q0q2 - ax) + v2q0 * (2.0 * q0q1 + v2q2q3 - ay) - 4.0 * q1 * (1 - 2.0 * q1q1 - 2.0 * q2q2 - az) + v2bz * q3 * (v2bx * (0.5 - q2q2 - q3q3) + v2bz * (q1q3 - q0q2) - mx) + (v2bx * q2 + v2bz * q0) * (v2bx * (q1q2 - q0q3) + v2bz * (q0q1 + q2q3) - my) + (v2bx * q3 - v4bz * q1) * (v2bx * (q0q2 + q1q3) + v2bz * (0.5 - q1q1 - q2q2) - mz);
+s2 = -v2q0 * (2.0 * q1q3 - v2q0q2 - ax) + v2q3 * (2.0 * q0q1 + v2q2q3 - ay) - 4.0 * q2 * (1 - 2.0 * q1q1 - 2.0 * q2q2 - az) + (-v4bx * q2 - v2bz * q0) * (v2bx * (0.5 - q2q2 - q3q3) + v2bz * (q1q3 - q0q2) - mx) + (v2bx * q1 + v2bz * q3) * (v2bx * (q1q2 - q0q3) + v2bz * (q0q1 + q2q3) - my) + (v2bx * q0 - v4bz * q2) * (v2bx * (q0q2 + q1q3) + v2bz * (0.5 - q1q1 - q2q2) - mz);
+s3 =  v2q1 * (2.0 * q1q3 - v2q0q2 - ax) + v2q2 * (2.0 * q0q1 + v2q2q3 - ay) + (-v4bx * q3 + v2bz * q1) * (v2bx * (0.5 - q2q2 - q3q3) + v2bz * (q1q3 - q0q2) - mx) + (-v2bx * q0 + v2bz * q2) * (v2bx * (q1q2 - q0q3) + v2bz * (q0q1 + q2q3) - my) + v2bx * q1 * (v2bx * (q0q2 + q1q3) + v2bz * (0.5 - q1q1 - q2q2) - mz);
+end</pre></TD>
+</TR>
+</TABLE>
+<TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th><th>Static Min</th><th>Static Max</th><th>Whole Number</th><th>ProposedType <BR /> (Best For WL = 14)</th></TR><TR class="a">
+<TD class="left">ax</TD><TD class="left">double</TD><TD class="right">-34.80751347043297</TD><TD class="right">34.84005286858399</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 7)</TD></TR>
+<TR class="b">
+<TD class="left">ay</TD><TD class="left">double</TD><TD class="right">-34.90398236820373</TD><TD class="right">34.89785568387759</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 7)</TD></TR>
+<TR class="a">
+<TD class="left">az</TD><TD class="left">double</TD><TD class="right">-34.79557534087401</TD><TD class="right">34.84527661542335</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 7)</TD></TR>
+<TR class="b">
+<TD class="left">hx</TD><TD class="left">double</TD><TD class="right">-105.60743190119335</TD><TD class="right">99.88493857445245</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">hy</TD><TD class="left">double</TD><TD class="right">-109.38818793515354</TD><TD class="right">107.18247370883807</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">mx</TD><TD class="left">double</TD><TD class="right">-34.88226273118304</TD><TD class="right">34.859457193763156</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 7)</TD></TR>
+<TR class="a">
+<TD class="left">my</TD><TD class="left">double</TD><TD class="right">-34.87869969704366</TD><TD class="right">34.80459398354477</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 7)</TD></TR>
+<TR class="b">
+<TD class="left">mz</TD><TD class="left">double</TD><TD class="right">-34.813022600228706</TD><TD class="right">34.87394630373823</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 7)</TD></TR>
+<TR class="a">
+<TD class="left">q0</TD><TD class="left">double</TD><TD class="right">3.570570748623325e-05</TD><TD class="right">0.9989153688848736</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="b">
+<TD class="left">q0q0</TD><TD class="left">double</TD><TD class="right">1.2748975470924532e-09</TD><TD class="right">0.9978319141944032</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="a">
+<TD class="left">q0q1</TD><TD class="left">double</TD><TD class="right">1.360543999529544e-06</TD><TD class="right">0.9572859744808377</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="b">
+<TD class="left">q0q2</TD><TD class="left">double</TD><TD class="right">3.159371764325006e-05</TD><TD class="right">0.990268393637985</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="a">
+<TD class="left">q0q3</TD><TD class="left">double</TD><TD class="right">1.2607252655712435e-05</TD><TD class="right">0.9508865413900319</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="b">
+<TD class="left">q1</TD><TD class="left">double</TD><TD class="right">0.0011858224966528885</TD><TD class="right">0.9997293972412646</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="a">
+<TD class="left">q1q1</TD><TD class="left">double</TD><TD class="right">1.4061749935680898e-06</TD><TD class="right">0.9994588677083823</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="b">
+<TD class="left">q1q2</TD><TD class="left">double</TD><TD class="right">0.00020807360179430894</TD><TD class="right">0.9593560707150262</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="a">
+<TD class="left">q1q3</TD><TD class="left">double</TD><TD class="right">4.1929434979802175e-05</TD><TD class="right">0.9633042186616178</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="b">
+<TD class="left">q2</TD><TD class="left">double</TD><TD class="right">0.00031275102459360493</TD><TD class="right">0.999652483205</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="a">
+<TD class="left">q2q2</TD><TD class="left">double</TD><TD class="right">9.781320338434968e-08</TD><TD class="right">0.9993050871779228</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="b">
+<TD class="left">q2q3</TD><TD class="left">double</TD><TD class="right">1.4555749551062225e-05</TD><TD class="right">0.9719960409810587</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="a">
+<TD class="left">q3</TD><TD class="left">double</TD><TD class="right">0.00026636350472653003</TD><TD class="right">0.9999401377937522</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="b">
+<TD class="left">q3q3</TD><TD class="left">double</TD><TD class="right">7.094951665020019e-08</TD><TD class="right">0.9998802791709882</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="c">
+<TD class="left">s0</TD><TD class="left">double</TD><TD class="right">-2897.515350379848</TD><TD class="right">36751.802666879295</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, -3)</TD></TR>
+<TR class="c">
+<TD class="left">s1</TD><TD class="left">double</TD><TD class="right">-5001.364109780344</TD><TD class="right">75148.11810152023</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, -4)</TD></TR>
+<TR class="c">
+<TD class="left">s2</TD><TD class="left">double</TD><TD class="right">-3634.878716582814</TD><TD class="right">83005.55334225042</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, -4)</TD></TR>
+<TR class="c">
+<TD class="left">s3</TD><TD class="left">double</TD><TD class="right">-3630.0697912146093</TD><TD class="right">76668.09866278493</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, -4)</TD></TR>
+<TR class="a">
+<TD class="left">v2bx</TD><TD class="left">double</TD><TD class="right">0.45009781807224947</TD><TD class="right">139.98402868919166</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">v2bz</TD><TD class="left">double</TD><TD class="right">-110.32901022751392</TD><TD class="right">107.93409675092953</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">v2q0</TD><TD class="left">double</TD><TD class="right">7.14114149724665e-05</TD><TD class="right">1.9978307377697473</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 13)</TD></TR>
+<TR class="b">
+<TD class="left">v2q0mx</TD><TD class="left">double</TD><TD class="right">-67.18740188898857</TD><TD class="right">67.79581086231374</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">v2q0my</TD><TD class="left">double</TD><TD class="right">-67.84622799385136</TD><TD class="right">67.81732533391211</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">v2q0mz</TD><TD class="left">double</TD><TD class="right">-66.90130511815312</TD><TD class="right">66.01816172860686</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">v2q0q2</TD><TD class="left">double</TD><TD class="right">6.318743528650013e-05</TD><TD class="right">1.98053678727597</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 13)</TD></TR>
+<TR class="b">
+<TD class="left">v2q1</TD><TD class="left">double</TD><TD class="right">0.002371644993305777</TD><TD class="right">1.9994587944825293</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 13)</TD></TR>
+<TR class="a">
+<TD class="left">v2q1mx</TD><TD class="left">double</TD><TD class="right">-63.577153961931096</TD><TD class="right">68.63045136114364</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">v2q2</TD><TD class="left">double</TD><TD class="right">0.0006255020491872099</TD><TD class="right">1.99930496641</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 13)</TD></TR>
+<TR class="a">
+<TD class="left">v2q2q3</TD><TD class="left">double</TD><TD class="right">2.911149910212445e-05</TD><TD class="right">1.9439920819621175</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 13)</TD></TR>
+<TR class="b">
+<TD class="left">v2q3</TD><TD class="left">double</TD><TD class="right">0.0005327270094530601</TD><TD class="right">1.9998802755875045</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 13)</TD></TR>
+<TR class="a">
+<TD class="left">v4bx</TD><TD class="left">double</TD><TD class="right">0.9001956361444989</TD><TD class="right">279.9680573783833</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">v4bz</TD><TD class="left">double</TD><TD class="right">-220.65802045502784</TD><TD class="right">215.86819350185905</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 5)</TD></TR>
+</TABLE>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+C:/EELE466/Lab2/cla_8bit.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\EELE466\Lab2\cla_8bit.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cla_8bit
+-- Compiling architecture cla_8bit_arch of cla_8bit
+
+} {} {}} C:/EELE466/Lab2/cla_4bit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/EELE466/Lab2/cla_4bit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cla_4bit
+-- Compiling architecture cla_4bit_arch of cla_4bit
+
+} {} {}}

@@ -1,0 +1,495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Code Generation Report</title>
+<link rel="stylesheet" type="text/css" href="resources/eml_report.css" />
+<link rel="stylesheet" type="text/css" href="resources/jQuery/ui.resizable.css" />
+<link rel="stylesheet" type="text/css" href="index.css" />
+<style>
+	pre.code{
+		-moz-tab-size: 4; /* For Firefox */
+		-o-tab-size: 4; /* For Opera 10.6-12.1 */
+		tab-size: 4; /* For Chrome */
+	}
+</style>
+<script type="text/javascript" src="resources/jQuery/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="resources/jQuery/jquery-ui-1.7.custom.min.js"></script>
+<script type="text/javascript" src="resources/jQuery/jquery.tablesorter.mod.js"></script>
+<script type="text/javascript" src="resources/jQuery/jquery.hotkeys-0.7.8.js"></script>
+<script type="text/javascript" src="resources/eml_report_interactions.js"></script>
+<script type="text/javascript" src="resources/eml_report_layout.js"></script>
+<script type="text/javascript" src="rtwshrink.js"></script>
+<script type="text/javascript">
+var localizedMessages = {
+    callSelectPrompt: "Select a function call:",
+    callSelectSource: "Calls from this function",
+    callSelectTarget: "Calls to this function",
+    infoForExpression: "Information for the selected expression:",
+    infoForVarType: "Information for the selected variable:",
+    infoForVarConst: "Information for the selected compile-time constant:",
+    infoForVarNone: "This variable does not have information associated with it.",
+    infoForFilter: "Matched {0}/{1} functions, {2}/{3} methods",
+    autoExtrinsicCall: "Only supported within the MATLAB environment."
+};
+var keyBindings = {
+        selectMCodeTab: "Ctrl+m",
+    selectCallStackTab: "Ctrl+k",
+        selectCCodeTab: "Ctrl+c",
+       selectReportTab: "Ctrl+r",
+     selectCenterPanel: "Ctrl+w",
+      selectSummaryTab: "Ctrl+s",
+     selectMessagesTab: "Ctrl+a",
+    selectWatchListTab: "Ctrl+v",
+     selectBuildLogTab: "Ctrl+t",
+    clearAllHighlights: "Esc"
+};
+var functionInfoTable = {
+ MATLABcode1: "Madgwick_normalize_fixpt1_mcode.html",
+ fpath1: "C:/466/JG/Lab3/hdl_coder_Madgwick_normalize/codegen/Madgwick_normalize/fixpt/Madgwick_normalize_fixpt.m",
+ lines1: [1, 7, 25],
+ watch1: "Madgwick_normalize_fixpt1_watch.html",
+ title1: "Function: <span class='functionname'><a title='C:&nbsp;\\466\\JG\\Lab3\\hdl_coder_Madgwick_normalize\\codegen\\Madgwick_normalize\\fixpt\\Madgwick_normalize_fixpt.m' class='functionlink' href=\"matlab: open('C:\\466\\JG\\Lab3\\hdl_coder_Madgwick_normalize\\codegen\\Madgwick_normalize\\fixpt\\Madgwick_normalize_fixpt.m')\">Madgwick_normalize_fixpt</a></span>",
+ tcall1: [  ],
+ scall1: [ [ "From line 9 to Madgwick_normalize_fixpt > get_fimath", "2#srcline62" ], [ "From line 16 to Madgwick_normalize_fixpt > invSqrt", "268#srcline25" ] ],
+ MATLABcode2: "get_fimath2_mcode.html",
+ fpath2: "C:/466/JG/Lab3/hdl_coder_Madgwick_normalize/codegen/Madgwick_normalize/fixpt/Madgwick_normalize_fixpt.m",
+ lines2: [61, 62, 70],
+ watch2: "get_fimath2_watch.html",
+ title2: "Function: <span class='functionname'><a title='C:&nbsp;\\466\\JG\\Lab3\\hdl_coder_Madgwick_normalize\\codegen\\Madgwick_normalize\\fixpt\\Madgwick_normalize_fixpt.m' class='functionlink' href=\"matlab: open('C:\\466\\JG\\Lab3\\hdl_coder_Madgwick_normalize\\codegen\\Madgwick_normalize\\fixpt\\Madgwick_normalize_fixpt.m')\">Madgwick_normalize_fixpt &gt; get_fimath</a></span>",
+ tcall2: [ [ "From Madgwick_normalize_fixpt line 9", "1#F2N5:B17" ], [ "From Madgwick_normalize_fixpt > invSqrt line 26", "268#F2N5:B160" ] ],
+ scall2: [  ],
+ MATLABcode193: "divideType193_mcode.html",
+ fpath193: "C:/466/JG/Lab3/hdl_coder_Madgwick_normalize/codegen/Madgwick_normalize/fixpt/Madgwick_normalize_fixpt.m",
+ lines193: [30, 33, 50],
+ watch193: "divideType193_watch.html",
+ title193: "Function: <span class='functionname'><a title='C:&nbsp;\\466\\JG\\Lab3\\hdl_coder_Madgwick_normalize\\codegen\\Madgwick_normalize\\fixpt\\Madgwick_normalize_fixpt.m' class='functionlink' href=\"matlab: open('C:\\466\\JG\\Lab3\\hdl_coder_Madgwick_normalize\\codegen\\Madgwick_normalize\\fixpt\\Madgwick_normalize_fixpt.m')\">Madgwick_normalize_fixpt &gt; divideType</a></span>",
+ tcall193: [ [ "From Madgwick_normalize_fixpt > fi_div line 55", "259#F193N3:B348" ] ],
+ scall193: [  ],
+ MATLABcode259: "fi_div259_mcode.html",
+ fpath259: "C:/466/JG/Lab3/hdl_coder_Madgwick_normalize/codegen/Madgwick_normalize/fixpt/Madgwick_normalize_fixpt.m",
+ lines259: [48, 50, 62],
+ watch259: "fi_div259_watch.html",
+ title259: "Function: <span class='functionname'><a title='C:&nbsp;\\466\\JG\\Lab3\\hdl_coder_Madgwick_normalize\\codegen\\Madgwick_normalize\\fixpt\\Madgwick_normalize_fixpt.m' class='functionlink' href=\"matlab: open('C:\\466\\JG\\Lab3\\hdl_coder_Madgwick_normalize\\codegen\\Madgwick_normalize\\fixpt\\Madgwick_normalize_fixpt.m')\">Madgwick_normalize_fixpt &gt; fi_div</a></span>",
+ tcall259: [ [ "From Madgwick_normalize_fixpt > invSqrt line 28", "268#F259N4:B167" ] ],
+ scall259: [ [ "From line 55 to Madgwick_normalize_fixpt > divideType", "193#srcline33" ] ],
+ MATLABcode268: "invSqrt268_mcode.html",
+ fpath268: "C:/466/JG/Lab3/hdl_coder_Madgwick_normalize/codegen/Madgwick_normalize/fixpt/Madgwick_normalize_fixpt.m",
+ lines268: [24, 25, 33],
+ watch268: "invSqrt268_watch.html",
+ title268: "Function: <span class='functionname'><a title='C:&nbsp;\\466\\JG\\Lab3\\hdl_coder_Madgwick_normalize\\codegen\\Madgwick_normalize\\fixpt\\Madgwick_normalize_fixpt.m' class='functionlink' href=\"matlab: open('C:\\466\\JG\\Lab3\\hdl_coder_Madgwick_normalize\\codegen\\Madgwick_normalize\\fixpt\\Madgwick_normalize_fixpt.m')\">Madgwick_normalize_fixpt &gt; invSqrt</a></span>",
+ tcall268: [ [ "From Madgwick_normalize_fixpt line 16", "1#F268N6:B85" ] ],
+ scall268: [ [ "From line 26 to Madgwick_normalize_fixpt > get_fimath", "2#srcline62" ], [ "From line 28 to Madgwick_normalize_fixpt > fi_div", "259#srcline50" ] ],
+ rootFcnID: "1",
+ firstPage: "1",
+ htmlRoot: "C:/466/JG/Lab3/hdl_coder_Madgwick_normalize/codegen/Madgwick_normalize/hdlsrc/html/"
+};
+var scriptInfoTable = {
+ fpath1: "C:/466/JG/Lab3/hdl_coder_Madgwick_normalize/codegen/Madgwick_normalize/fixpt/Madgwick_normalize_fixpt.m",
+ fpath2: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/isnumerictype.m",
+ fpath3: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/length.m",
+ fpath4: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/eml_fi_checkforconst.m",
+ fpath5: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/isfi.m",
+ fpath6: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/isfloat.m",
+ fpath7: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/castLike.m",
+ fpath8: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/fi_impl.m",
+ fpath9: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/eml_fi_checkforntype.m",
+ fpath10: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/scalexpCompatible.m",
+ fpath11: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/isfixed.m",
+ fpath12: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/isscaledtype.m",
+ fpath13: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/eml_fixpt_times.m",
+ fpath14: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/times.m",
+ fpath15: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/mtimes.m",
+ fpath16: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/plus.m",
+ fpath17: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/eml_fi_checkforerror.m",
+ fpath18: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/sqrt.m",
+ fpath19: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/isBuiltInNumeric.m",
+ fpath20: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/+scalar/floor.m",
+ fpath21: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/applyScalarFunctionInPlace.m",
+ fpath22: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elfun/floor.m",
+ fpath23: "C:/Program Files/MATLAB/R2017b/toolbox/shared/coder/coder/+coder/+internal/narginchk.m",
+ fpath24: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/private/eml_isequal_core.m",
+ fpath25: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/isnan.m",
+ fpath26: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/isequal.m",
+ fpath27: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/isslopebiasscaled.m",
+ fpath28: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@numerictype/isscaleddouble.m",
+ fpath29: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/eml_fi_eps_lsb.m",
+ fpath30: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/lsb.m",
+ fpath31: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/issigned.m",
+ fpath32: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/constNonSingletonDim.m",
+ fpath33: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/allOrAny.m",
+ fpath34: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/all.m",
+ fpath35: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/eml_type_relop_const.m",
+ fpath36: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/eml_make_same_complexity.m",
+ fpath37: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/le.m",
+ fpath38: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/intmax.m",
+ fpath39: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/intmin.m",
+ fpath40: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/eml/eml_int_forloop_overflow_check.m",
+ fpath41: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/scalarEg.m",
+ fpath42: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/isfimath.m",
+ fpath43: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/scalexpAllocNoCheck.m",
+ fpath44: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/scalexpAlloc.m",
+ fpath45: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/bitset.m",
+ fpath46: "C:/Program Files/MATLAB/R2017b/toolbox/shared/coder/coder/+coder/+internal/error.m",
+ fpath47: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/minOrMax.m",
+ fpath48: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/relop.m",
+ fpath49: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/datafun/min.m",
+ fpath50: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/datafun/max.m",
+ fpath51: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@numerictype/isfixed.m",
+ fpath52: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/isscaleddouble.m",
+ fpath53: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/eml_check_div_fimath.m",
+ fpath54: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/zerosLike.m",
+ fpath55: "C:/Program Files/MATLAB/R2017b/toolbox/shared/coder/coder/+coder/+internal/indexIntRelop.m",
+ fpath56: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/floatModel.m",
+ fpath57: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/eq.m",
+ fpath58: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/lt.m",
+ fpath59: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/lowerbound.m",
+ fpath60: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/stripscaling.m",
+ fpath61: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/bitcmp.m",
+ fpath62: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/upperbound.m",
+ fpath63: "C:/Program Files/MATLAB/R2017b/toolbox/shared/coder/coder/+coder/+internal/warning.m",
+ fpath64: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/divide.m",
+ fpath65: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/@embedded/@fi/ne.m"
+};
+</script>
+</head>
+<body>
+
+<div class="west">
+<ul class="ui-tabs-nav">
+<li class="ui-tabs-nav-item ui-tabs-selected"><span class="tab-link" id="MATLABcode"><span>MATLAB code</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="callstack"><span>Call stack</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="hdlcode"><span>HDL Code</span></span></li>
+</ul>
+<div id="MATLABcodebody" class="ui-tabs-panel">
+<!-- Begin Filter -->
+<div class="grayline methodset" onclick="filterClick(event);">
+<a class="collapsed">Filter</a>
+</div>
+<div id="filterbody" class="hidden">
+<table class="myfunc-filter-tbl">
+<tr>
+<td title="Use this filter to display only functions and methods that contain variables or expressions with the specified attributes." colspan="2" class="checkbox">
+<div class="myfunc-filterby-chk"><input type="checkbox" class="filterenable" />
+<div class="filter-enable-lbl">Filter functions and methods</div></div></td></tr><tr>
+<td class="label"><div class="myfunc-filterby-lbl">Filter by:</div></td>
+<td class="select">
+<div class="filters">
+<select class="myfunc-filterby">
+<option id="size">Size</option>
+<option id="complex">Complexity</option>
+<option id="class">Class</option>
+</select>
+</div>
+</td>
+</tr>
+
+<tr>
+<td class="label"><div class="myfunc-filterstr-lbl">Filter:</div></td>
+<td class="input"><div>
+
+<div class="size">
+<select class="myfunc-filter size">
+<option value="1 2 193 259 268">1 x 1</option>
+</select>
+</div>
+
+<div class="complex">
+<select class="myfunc-filter complex">
+<option value="">Complex values</option>
+<option value="1 193 259 268">Real values</option>
+</select>
+</div>
+<!-- Begin Class Filter -->
+<div class="class">
+<select class="myfunc-filter class">
+<option value="193">double</option>
+<option value="1 193 259 268">embedded.fi</option>
+<option value="1 2 268">embedded.fimath</option>
+<option value="193">embedded.numerictype</option>
+</select>
+</div>
+<!-- End Class Filter -->
+
+
+<div class="wl">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="mode">
+<select class="wl-operator" name=":1 2 193 268;1:193 259;14:1 268;28:;29:;30:;32:193 259;7:193 259">
+<option value="eq">=</option>
+<option value="ne">~=</option>
+<option value="lt">&lt;</option>
+<option value="le">&lt;=</option>
+<option value="ge">&gt;=</option>
+<option value="gt">&gt;</option>
+</select>
+</td>
+<td class="value"><select class="wl">
+<option value="193 259">1</option>
+<option value="1 268">14</option>
+<option value="">28</option>
+<option value="">29</option>
+<option value="">30</option>
+<option value="193 259">32</option>
+<option value="193 259">7</option>
+</select>
+<input class="wl" />
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<div class="myfunc-count"></div>
+</div>
+<!-- End Filter -->
+<div class="grayline methodset" onmouseover="callTreeMouseOver(event);" onmouseout="callTreeMouseOut(event);" onclick="functionSetClick(event);">
+<a class="expanded">Functions</a>
+</div>
+<!-- Begin Function Tree -->
+<div id="functiontreebody">
+<div class="functionwrapper" onmouseover="callTreeMouseOver(event);" onmouseout="callTreeMouseOut(event);" onclick="functionTreeClick(event);">
+<ol class="tree">
+<!-- Begin Function Tree Roots -->
+<li class="leaf  passed"><a href="#" class="fcn  " id="F1N2:F1">Madgwick_normalize_fixpt</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F193N3:F2">Madgwick_normalize_fixpt &gt; divideType</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F259N4:F3">Madgwick_normalize_fixpt &gt; fi_div</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F2N5:F4">Madgwick_normalize_fixpt &gt; get_fimath</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F268N6:F5">Madgwick_normalize_fixpt &gt; invSqrt</a></li>
+<!-- End Function Tree Roots -->
+</ol>
+<!-- Function Tree Nodes -->
+<div class="functiontreenodes hidden">
+</div>
+<!-- End Function Tree Nodes -->
+</div>
+</div>
+<!-- End Function Tree -->
+</div>
+<!-- Begin Call Tree -->
+<div id="callstackbody" class="ui-tabs-panel hidden">
+<div class="treewrapper" onmouseover="callTreeMouseOver(event);" onmouseout="callTreeMouseOut(event);" onclick="callTreeClick(event);">
+<ol class="tree">
+<!-- Call Tree Root -->
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F1N2:L1">Madgwick_normalize_fixpt</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F2N5:L2">Madgwick_normalize_fixpt &gt; get_fimath</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F268N6:L3">Madgwick_normalize_fixpt &gt; invSqrt</a></li>
+</ul>
+</li>
+</ol>
+<!-- Call Tree Nodes -->
+<div class="callstacknodes hidden">
+<ol class="callstacknode" id="callstacknode1">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F1N2:l1">Madgwick_normalize_fixpt</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F2N5:l2">Madgwick_normalize_fixpt &gt; get_fimath</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F268N6:l3">Madgwick_normalize_fixpt &gt; invSqrt</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode2">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F2N5:l4">Madgwick_normalize_fixpt &gt; get_fimath</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode193">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F193N3:l5">Madgwick_normalize_fixpt &gt; divideType</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode259">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F259N4:l6">Madgwick_normalize_fixpt &gt; fi_div</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F193N3:l7">Madgwick_normalize_fixpt &gt; divideType</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode268">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F268N6:l8">Madgwick_normalize_fixpt &gt; invSqrt</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F2N5:l9">Madgwick_normalize_fixpt &gt; get_fimath</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F259N4:l10">Madgwick_normalize_fixpt &gt; fi_div</a></li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<!-- End Call Tree -->
+<div id="hdlcodebody" class="ui-tabs-panel hidden">
+<table class="myfunc-list" cellspacing="0" cellpadding="0" onclick="cFileClick(event);">
+<tbody>
+<tr class="subtitle"><td><div><b>HDL Code</b></div></td></tr>
+<tr class="hdlcode" id="Madgwick_normalize_fixpt_pac_vhd.html"><td class="hdlcode"><a href="#">Madgwick_normalize_fixpt_pac.vhd</a></td></tr>
+<tr class="hdlcode" id="Madgwick_normalize_fixpt_vhd.html"><td class="hdlcode"><a href="#">Madgwick_normalize_fixpt.vhd</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Tooltips -->
+<div class="aux hidden">
+<div class="tooltips">
+<div class="tooltip" id="TT1"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>14</td></tr><tr><th>FL</th><td>0</td></tr></table></div>
+<div class="tooltip" id="TT2"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fimath</td></tr></table></div>
+<div class="tooltip" id="TT3"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>14</td></tr><tr><th>FL</th><td>-16</td></tr></table></div>
+<div class="tooltip" id="TT4"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>30</td></tr><tr><th>FL</th><td>0</td></tr></table></div>
+<div class="tooltip" id="TT5"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>29</td></tr><tr><th>FL</th><td>0</td></tr></table></div>
+<div class="tooltip" id="TT6"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>28</td></tr><tr><th>FL</th><td>0</td></tr></table></div>
+<div class="tooltip" id="TT7"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>14</td></tr><tr><th>FL</th><td>24</td></tr></table></div>
+<div class="tooltip" id="TT8"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>logical</td></tr></table></div>
+<div class="tooltip" id="TT9"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>1</td></tr><tr><th>FL</th><td>0</td></tr></table></div>
+<div class="tooltip" id="TT10"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>28</td></tr><tr><th>FL</th><td>24</td></tr></table></div>
+<div class="tooltip" id="TT11"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT12"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT13"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT14"><table class="tooltip"><tr><th>Size</th><td>1 x 4</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT15"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.numerictype</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>14</td></tr><tr><th>FL</th><td>0</td></tr></table></div>
+<div class="tooltip" id="TT16"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT17"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>uint32</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT18"><table class="tooltip"><tr><th>Size</th><td>1 x 8</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT19"><table class="tooltip"><tr><th>Size</th><td>1 x 15</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT20"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fimath</td></tr></table></div>
+<div class="tooltip" id="TT21"><table class="tooltip"><tr><th>Size</th><td>1 x 5</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT22"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>mxArray</td></tr></table></div>
+<div class="tooltip" id="TT23"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.numerictype</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>28</td></tr><tr><th>FL</th><td>0</td></tr></table></div>
+<div class="tooltip" id="TT24"><table class="tooltip"><tr><th>Size</th><td>0 x 0</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT25"><table class="tooltip"><tr><th>Size</th><td>0 x 0</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT26"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.numerictype</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>29</td></tr><tr><th>FL</th><td>0</td></tr></table></div>
+<div class="tooltip" id="TT27"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.numerictype</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>30</td></tr><tr><th>FL</th><td>0</td></tr></table></div>
+<div class="tooltip" id="TT28"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.numerictype</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>14</td></tr><tr><th>FL</th><td>-16</td></tr></table></div>
+<div class="tooltip" id="TT29"><table class="tooltip"><tr><th>Size</th><td>1 x 6</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT30"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.numerictype</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>1</td></tr><tr><th>FL</th><td>0</td></tr></table></div>
+<div class="tooltip" id="TT31"><table class="tooltip"><tr><th>Size</th><td>1 x 5</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT32"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT33"><table class="tooltip"><tr><th>Size</th><td>1 x 0</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT34"><table class="tooltip"><tr><th>Size</th><td>1 x 7</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT35"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.numerictype</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>7</td></tr><tr><th>FL</th><td>-8</td></tr></table></div>
+<div class="tooltip" id="TT36"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>7</td></tr><tr><th>FL</th><td>-8</td></tr></table></div>
+<div class="tooltip" id="TT37"><table class="tooltip"><tr><th>Size</th><td>1 x 3</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT38"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fimath</td></tr></table></div>
+<div class="tooltip" id="TT39"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>7</td></tr><tr><th>FL</th><td>-8</td></tr></table></div>
+<div class="tooltip" id="TT40"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>int32</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT41"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT42"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>int8</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT43"><table class="tooltip"><tr><th>Size</th><td>1 x 3</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT44"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>uint8</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT45"><table class="tooltip"><tr><th>Size</th><td>1 x 36</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT46"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>14</td></tr><tr><th>FL</th><td>-16</td></tr></table></div>
+<div class="tooltip" id="TT47"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>14</td></tr><tr><th>FL</th><td>-16</td></tr></table></div>
+<div class="tooltip" id="TT48"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fimath</td></tr></table></div>
+<div class="tooltip" id="TT49"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>7</td></tr><tr><th>FL</th><td>-8</td></tr></table></div>
+<div class="tooltip" id="TT50"><table class="tooltip"><tr><th>Size</th><td>1 x 9</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT51"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>1</td></tr><tr><th>FL</th><td>0</td></tr></table></div>
+<div class="tooltip" id="TT52"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fimath</td></tr></table></div>
+<div class="tooltip" id="TT53"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>7</td></tr><tr><th>FL</th><td>-8</td></tr></table></div>
+<div class="tooltip" id="TT54"><table class="tooltip"><tr><th>Size</th><td>1 x 23</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT55"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT56"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT57"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.numerictype</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>32</td></tr><tr><th>FL</th><td>24</td></tr></table></div>
+<div class="tooltip" id="TT58"><table class="tooltip"><tr><th>Size</th><td>0 x 0</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>32</td></tr><tr><th>FL</th><td>24</td></tr></table></div>
+<div class="tooltip" id="TT59"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>32</td></tr><tr><th>FL</th><td>24</td></tr></table></div>
+<div class="tooltip" id="TT60"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT61"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>32</td></tr><tr><th>FL</th><td>0</td></tr></table></div>
+<div class="tooltip" id="TT62"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.numerictype</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>32</td></tr><tr><th>FL</th><td>0</td></tr></table></div>
+<div class="tooltip" id="TT63"><table class="tooltip"><tr><th>Size</th><td>1 x 21</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT64"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>32</td></tr><tr><th>FL</th><td>24</td></tr></table></div>
+<div class="tooltip" id="TT65"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.numerictype</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>14</td></tr><tr><th>FL</th><td>24</td></tr></table></div>
+<div class="tooltip" id="TT66"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.numerictype</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>28</td></tr><tr><th>FL</th><td>24</td></tr></table></div>
+<div class="tooltip" id="V1"><table class="tooltip"><tr><th>Value</th><td>     1</br></br>          DataTypeMode: Fixed-point: binary point scaling</br>            Signedness: Unsigned</br>            WordLength: 1</br>        FractionLength: 0</br></br>        RoundingMethod: Floor</br>        OverflowAction: Wrap</br>           ProductMode: FullPrecision</br>  MaxProductWordLength: 128</br>               SumMode: FullPrecision</br>      MaxSumWordLength: 128</br></td></tr></table></div>
+<div class="tooltip" id="V2"><table class="tooltip"><tr><th>Value</th><td></br>        RoundingMethod: Floor</br>        OverflowAction: Wrap</br>           ProductMode: FullPrecision</br>  MaxProductWordLength: 128</br>               SumMode: FullPrecision</br>      MaxSumWordLength: 128</br></td></tr></table></div>
+<div class="tooltip" id="V3"><table class="tooltip"><tr><th>Value</th><td></br>          DataTypeMode: Fixed-point: binary point scaling</br>            Signedness: Unsigned</br>            WordLength: 14</br>        FractionLength: 0</br></td></tr></table></div>
+<div class="tooltip" id="V4"><table class="tooltip"><tr><th>Value</th><td></br>          DataTypeMode: Fixed-point: binary point scaling</br>            Signedness: Unsigned</br>            WordLength: 14</br>        FractionLength: -16</br></td></tr></table></div>
+<div class="tooltip" id="V5"><table class="tooltip"><tr><th>Value</th><td></br>          DataTypeMode: Fixed-point: binary point scaling</br>            Signedness: Unsigned</br>            WordLength: 30</br>        FractionLength: 0</br></td></tr></table></div>
+<div class="tooltip" id="V6"><table class="tooltip"><tr><th>Value</th><td></br>          DataTypeMode: Fixed-point: binary point scaling</br>            Signedness: Unsigned</br>            WordLength: 29</br>        FractionLength: 0</br></td></tr></table></div>
+<div class="tooltip" id="V7"><table class="tooltip"><tr><th>Value</th><td></br>          DataTypeMode: Fixed-point: binary point scaling</br>            Signedness: Unsigned</br>            WordLength: 28</br>        FractionLength: 0</br></td></tr></table></div>
+<div class="tooltip" id="V8"><table class="tooltip"><tr><th>Value</th><td></br>          DataTypeMode: Fixed-point: binary point scaling</br>            Signedness: Unsigned</br>            WordLength: 14</br>        FractionLength: 24</br></td></tr></table></div>
+<div class="tooltip" id="V9"><table class="tooltip"><tr><th>Value</th><td></br>          DataTypeMode: Fixed-point: binary point scaling</br>            Signedness: Unsigned</br>            WordLength: 1</br>        FractionLength: 0</br></td></tr></table></div>
+<div class="tooltip" id="V10"><table class="tooltip"><tr><th>Value</th><td></br>          DataTypeMode: Fixed-point: binary point scaling</br>            Signedness: Unsigned</br>            WordLength: 28</br>        FractionLength: 24</br></td></tr></table></div>
+<div class="tooltip" id="V11"><table class="tooltip"><tr><th>Value</th><td></br>        RoundingMethod: Nearest</br>        OverflowAction: Saturate</br>           ProductMode: FullPrecision</br>               SumMode: FullPrecision</br></td></tr></table></div>
+<div class="tooltip" id="V12"><table class="tooltip"><tr><th>Value</th><td></br>          DataTypeMode: Fixed-point: binary point scaling</br>            Signedness: Unsigned</br>            WordLength: 7</br>        FractionLength: -8</br></td></tr></table></div>
+<div class="tooltip" id="V13"><table class="tooltip"><tr><th>Value</th><td></br>        RoundingMethod: Floor</br>        OverflowAction: Wrap</br>           ProductMode: SpecifyPrecision</br>     ProductWordLength: 14</br> ProductFractionLength: -16</br>               SumMode: SpecifyPrecision</br>         SumWordLength: 7</br>     SumFractionLength: -8</br>         CastBeforeSum: true</br></td></tr></table></div>
+<div class="tooltip" id="V14"><table class="tooltip"><tr><th>Value</th><td></br>        RoundingMethod: Floor</br>        OverflowAction: Wrap</br>           ProductMode: SpecifyPrecision</br>     ProductWordLength: 14</br> ProductFractionLength: -16</br>               SumMode: SpecifyPrecision</br>         SumWordLength: 14</br>     SumFractionLength: -16</br>         CastBeforeSum: true</br></td></tr></table></div>
+<div class="tooltip" id="V15"><table class="tooltip"><tr><th>Value</th><td></br>        RoundingMethod: Zero</br>        OverflowAction: Wrap</br>           ProductMode: FullPrecision</br>  MaxProductWordLength: 128</br>               SumMode: FullPrecision</br>      MaxSumWordLength: 128</br></td></tr></table></div>
+<div class="tooltip" id="V16"><table class="tooltip"><tr><th>Value</th><td></br>          DataTypeMode: Fixed-point: binary point scaling</br>            Signedness: Unsigned</br>            WordLength: 32</br>        FractionLength: 24</br></td></tr></table></div>
+<div class="tooltip" id="V17"><table class="tooltip"><tr><th>Value</th><td></br>          DataTypeMode: Fixed-point: binary point scaling</br>            Signedness: Unsigned</br>            WordLength: 32</br>        FractionLength: 0</br></td></tr></table></div>
+</div>
+</div>
+<!-- End Tooltips -->
+
+<div class="south">
+<ul class="ui-tabs-nav">
+<li class="ui-tabs-nav-item ui-tabs-selected"><span class="tab-link" id="summary"><span>Summary</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="messages"><span>All Messages (0)</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="watchlist"><span>Variables</span></span></li>
+<li class="ui-tabs-nav-item hidden"><span class="tab-link" id="watchload"><span>Variables</span></span></li>
+</ul>
+
+<!-- Compilation Summary -->
+<div id="summarybody" class="ui-tabs-panel">
+<table cellpadding="1" cellspacing="4">
+<tr><td>HDL source code generated on:</td><td>06-Feb-2018 13:36:59</td></tr>
+<tr><td>Coding target:</td><td>HDL</td></tr>
+<tr><td>Number of errors:</td><td><a href="javascript:selectMessagesTab();">0</a></td></tr>
+<tr><td>Number of warnings:</td><td><a href="javascript:selectMessagesTab();">0</a></td></tr>
+<tr><td>Number of notices:</td><td><a href="javascript:selectMessagesTab();">0</a></td></tr>
+</table>
+<p/><p/><table>
+<tr><td><b>Tell Us What You Think</b></td></tr>
+<tr><td>We value your feedback. Please take a few minutes to answer this short questionnaire regarding the Code Generation Report.</td></tr>
+<tr><td><a href="matlab: emlcprivate('launchReportSurvey');">&gt;&gt;Provide Feedback</a></td></tr>
+</table>
+</div>
+
+<!-- Message Table -->
+<div id="messagesbody" class="ui-tabs-panel hidden">
+<div>
+<div class="msgsuccess">Code generation successful. Click here to <a href="javaScript:selectSummaryTab();">view summary</a>.</div>
+</div>
+</div>
+<!-- Watchlist Table -->
+<div id="watchlistbody" class="ui-tabs-panel hidden">
+</div>
+<div id="watchloadbody" class="ui-tabs-panel hidden">
+Loading Variables table ...
+</div>
+
+
+<!-- Potential Differences -->
+<div id="potentialDifferencesBody" class="ui-tabs-panel hidden">
+</div>
+
+</div>
+<!-- Begin MATLAB Code Panel -->
+<div class="center">
+<div class="center-title">
+<div class="ui-tabs-nav-item ui-tabs-selected">
+<span class="functiontitle">
+</span>
+<!-- Begin Call Sites -->
+<span id="callsiteselecttable" class="call-sites-tbl">
+<span id="callsiteselectlabel" class="filtered">Calls:</span>
+<select id="callsiteselect" onchange="callSiteChange(event)">
+<option value="callsiteprompt">Select a function call:</option>
+</select>
+</span>
+<!-- End Call Sites -->
+</div>
+</div>
+<div class="ui-tabs-panel">
+<iframe id="hiddenCodeFrame"></iframe>
+<div class="code" onmouseover="mcodeMouseOver(event);" onmouseout="mcodeMouseOut(event);"onclick="mcodeClick(event);">
+</div>
+</div>
+</div>
+<!-- End MATLAB Code Panel -->
+</body>
+</html>

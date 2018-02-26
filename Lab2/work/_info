@@ -1,0 +1,142 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/466/Lab2
+T_opt
+!s110 1517339861
+V6@=f6:?^2KbhUjT>A?c`U3
+04 8 13 work cla_8bit cla_8bit_arch 1
+=1-a0369fb9d72a-5a70c4d5-14a-31a8
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;10.5c;63
+Ecla_4bit
+Z1 w1517339344
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/EELE466/Lab2
+Z5 8C:/EELE466/Lab2/cla_4bit.vhd
+Z6 FC:/EELE466/Lab2/cla_4bit.vhd
+l0
+L4
+Vk0<ifV0<9Zk^D[6X8Q]Sg1
+!s100 D<1PI^X;]7no0^haSQUWa2
+Z7 OL;C;10.5c;63
+32
+Z8 !s110 1517339851
+!i10b 1
+Z9 !s108 1517339851.000000
+Z10 !s90 -work|work|-2002|-explicit|-vopt|-stats=none|C:/EELE466/Lab2/cla_4bit.vhd|
+Z11 !s107 C:/EELE466/Lab2/cla_4bit.vhd|
+!i113 0
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Acla_4bit_arch
+R2
+R3
+DEx4 work 8 cla_4bit 0 22 k0<ifV0<9Zk^D[6X8Q]Sg1
+l15
+L11
+V7L0hSeLLkN_FeK]J>6H_e2
+!s100 0<Ji7TMNJPW;zKmNIQLZV2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Ecla_8bit
+Z14 w1517339841
+R2
+R3
+R4
+Z15 8C:/EELE466/Lab2/cla_8bit.vhd
+Z16 FC:/EELE466/Lab2/cla_8bit.vhd
+l0
+L4
+VOdi2_ekm;7Via29B@4=HQ0
+!s100 [1MlhTP1ZXNgT9N7G0gdh3
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -work|work|-2002|-explicit|-vopt|-stats=none|C:/EELE466/Lab2/cla_8bit.vhd|
+Z18 !s107 C:/EELE466/Lab2/cla_8bit.vhd|
+!i113 0
+R12
+R13
+Acla_8bit_arch
+R2
+R3
+DEx4 work 8 cla_8bit 0 22 Odi2_ekm;7Via29B@4=HQ0
+l23
+L11
+V2Fd7TUL<c_<8zad3cR^jB2
+!s100 Q4kJ?nKa8N1AN5UNUGLT]0
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 0
+R12
+R13
+Emod_full_adder
+Z19 w1516739264
+Z20 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z21 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z22 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z23 8C:/466/Lab2/mod_full_adder.vhd
+Z24 FC:/466/Lab2/mod_full_adder.vhd
+l0
+L6
+VEGNDzA4[a8z69c2GRG4g=3
+!s100 OnCeZaj`oPV@JBTK5HSVo3
+R7
+32
+Z25 !s110 1516740234
+!i10b 1
+Z26 !s108 1516740234.000000
+Z27 !s90 -work|work|-2002|-explicit|-vopt|-stats=none|C:/466/Lab2/mod_full_adder.vhd|
+Z28 !s107 C:/466/Lab2/mod_full_adder.vhd|
+!i113 0
+R12
+R13
+Amod_full_adder_arch
+R20
+R21
+R22
+R2
+R3
+DEx4 work 14 mod_full_adder 0 22 EGNDzA4[a8z69c2GRG4g=3
+l14
+L12
+VbBc>?U1?OViHYXF87<]H81
+!s100 fOUz2A<zW3Q>fkH7TkhoY1
+R7
+32
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 0
+R12
+R13

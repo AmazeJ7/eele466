@@ -1,0 +1,13 @@
+A B Ci S Co
+0 0 0  0 0
+0 0 1  1 0
+0 1 0  1 0
+0 1 1  0 1
+1 0 0  1 0 
+1 0 1  0 1 
+1 1 0  0 1
+1 1 1  1 1
+
+S <= (A xor B) xor Cin
+Cout <= (A and B) or ((A xor B) and Cin)
+

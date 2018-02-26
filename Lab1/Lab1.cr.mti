@@ -1,0 +1,23 @@
+C:/EELE466/Lab1/Ripple_carry_adder_8bit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/EELE466/Lab1/Ripple_carry_adder_8bit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity Ripple_carry_adder_8bit
+-- Compiling architecture Ripple_carry_adder_8bit_arch of Ripple_carry_adder_8bit
+
+} {} {}} C:/EELE466/Lab1/Full_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/EELE466/Lab1/Full_adder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity Full_adder
+-- Compiling architecture Full_adder_arch of Full_adder
+
+} {} {}}
