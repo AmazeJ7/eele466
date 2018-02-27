@@ -2211,21 +2211,21 @@ R1
 R2
 R3
 R4
-R5
-Z53 8C:/466/JG/Lab4/lzc.vhd
-Z54 FC:/466/JG/Lab4/lzc.vhd
+Z53 dC:/Users/johnn/Documents/College/EELE 466/Lab4
+Z54 8C:/Users/johnn/Documents/College/EELE 466/Lab4/lzc.vhd
+Z55 FC:/Users/johnn/Documents/College/EELE 466/Lab4/lzc.vhd
 l0
 L6
 VN;T<5a[A[S`1KW0<X:GiX1
 !s100 k_bD?MO;9K3<QAg>:J1EP1
-R8
+Z56 OV;C;10.5b;63
 32
-Z55 !s110 1519157761
+Z57 !s110 1519757468
 !i10b 1
-Z56 !s108 1519157761.000000
-Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/466/JG/Lab4/lzc.vhd|
-Z58 !s107 C:/466/JG/Lab4/lzc.vhd|
-!i113 0
+Z58 !s108 1519757468.000000
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/lzc.vhd|
+Z60 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/lzc.vhd|
+!i113 1
 R13
 R14
 Abehavioral
@@ -2238,14 +2238,14 @@ l53
 L14
 VZ1Kj^Y>4?gZFIIGO993lC1
 !s100 >m[7J79;YN8oJ9@4mncn<0
-R8
-32
-R55
-!i10b 1
 R56
+32
 R57
+!i10b 1
 R58
-!i113 0
+R59
+R60
+!i113 1
 R13
 R14
 Emf_cda_mn_cntr
@@ -2276,7 +2276,7 @@ R1
 R2
 R3
 R4
-Z59 DEx4 work 14 mf_cda_mn_cntr 0 22 hUQ?[U=V3:o15Ff:jd9[;2
+Z61 DEx4 work 14 mf_cda_mn_cntr 0 22 hUQ?[U=V3:o15Ff:jd9[;2
 l11651
 L11650
 VCCW7JN2TSYERLl0CUlTRi3
@@ -2315,7 +2315,7 @@ R14
 Abehave
 R3
 R4
-Z60 DEx4 work 17 mf_cda_scale_cntr 0 22 X^dTW?JKTackUPzHDTR8B0
+Z62 DEx4 work 17 mf_cda_scale_cntr 0 22 X^dTW?JKTackUPzHDTR8B0
 l11705
 L11704
 V<mdkj56UY1UIXM25WZg5:0
@@ -2332,12 +2332,12 @@ R13
 R14
 Emf_cycloneiii_pll
 R0
-Z61 DEx4 work 10 mf_pll_reg 0 22 1JUPJ<jBU;aDNN:bX>42W0
+Z63 DEx4 work 10 mf_pll_reg 0 22 1JUPJ<jBU;aDNN:bX>42W0
 R48
-R60
+R62
 R1
 R2
-R59
+R61
 R30
 R3
 R4
@@ -2381,12 +2381,12 @@ R13
 R14
 Emf_cycloneiiigl_pll
 R0
-R61
+R63
 R48
-Z62 DEx4 work 22 mf_stingray_scale_cntr 0 22 d@;P04Cz_?KWezZAQoBD^0
+Z64 DEx4 work 22 mf_stingray_scale_cntr 0 22 d@;P04Cz_?KWezZAQoBD^0
 R1
 R2
-Z63 DEx4 work 19 mf_stingray_mn_cntr 0 22 lM23cjoBVje@?PTj<3o]N3
+Z65 DEx4 work 19 mf_stingray_mn_cntr 0 22 lM23cjoBVje@?PTj<3o]N3
 R30
 R3
 R4
@@ -2452,7 +2452,7 @@ R14
 Abehave
 R3
 R4
-Z64 DEx4 work 9 mf_m_cntr 0 22 `^QB8AQQ1c9:DGZ9A`76e2
+Z66 DEx4 work 9 mf_m_cntr 0 22 `^QB8AQQ1c9:DGZ9A`76e2
 l2148
 L2147
 V`Y<^59UeP_QCe9@]L1JT92
@@ -2491,7 +2491,7 @@ R14
 Abehave
 R3
 R4
-Z65 DEx4 work 9 mf_n_cntr 0 22 cZP_EK:28]VYMBU[>@:Fb1
+Z67 DEx4 work 9 mf_n_cntr 0 22 cZP_EK:28]VYMBU[>@:Fb1
 l2197
 L2196
 V77H^zbJ3eE:IahSdeHeYl1
@@ -2530,7 +2530,7 @@ R14
 Abehave
 R3
 R4
-R61
+R63
 l2346
 L2345
 VH`=H8K;^A2RY`;e`G`7cf3
@@ -2613,7 +2613,7 @@ R1
 R2
 R3
 R4
-R63
+R65
 l14411
 L14410
 V@n7c_:IHVZ8z;d21d]_c^1
@@ -2695,7 +2695,7 @@ R14
 Abehave
 R3
 R4
-R62
+R64
 l14527
 L14526
 V^>G]1=:Gi7UPM?UzOlES12
@@ -2712,11 +2712,11 @@ R13
 R14
 Emf_stratix_pll
 R0
-R61
+R63
 R48
-Z66 DEx4 work 14 stx_scale_cntr 0 22 Y0@@IJ5PYQiGWaEZNKQ>F2
-R65
-R64
+Z68 DEx4 work 14 stx_scale_cntr 0 22 Y0@@IJ5PYQiGWaEZNKQ>F2
+R67
+R66
 R30
 R3
 R4
@@ -2758,7 +2758,7 @@ R13
 R14
 Emf_stratixii_pll
 R0
-R61
+R63
 R48
 R41
 R40
@@ -2804,12 +2804,12 @@ R13
 R14
 Emf_stratixiii_pll
 R0
-R61
+R63
 R48
-Z67 DEx4 work 17 mf_ttn_scale_cntr 0 22 fjB:HSkOh[z@BabMSlne02
+Z69 DEx4 work 17 mf_ttn_scale_cntr 0 22 fjB:HSkOh[z@BabMSlne02
 R1
 R2
-Z68 DEx4 work 14 mf_ttn_mn_cntr 0 22 R22FX7K`oz=i]deW9]bQC1
+Z70 DEx4 work 14 mf_ttn_mn_cntr 0 22 R22FX7K`oz=i]deW9]bQC1
 R30
 R3
 R4
@@ -2879,7 +2879,7 @@ R1
 R2
 R3
 R4
-R68
+R70
 l8527
 L8526
 V=]NX^Z^eMN>S89IHD^0Yc0
@@ -2918,7 +2918,7 @@ R14
 Abehave
 R3
 R4
-R67
+R69
 l8581
 L8580
 Vkja4V564mZhFDkbk00b:e0
@@ -2934,31 +2934,31 @@ R12
 R13
 R14
 Enewtons
-Z69 w1519157395
+w1519157396
 R1
 R2
 R3
 R4
-R5
-Z70 8C:\466\JG\Lab4\newtons.vhd
-Z71 FC:\466\JG\Lab4\newtons.vhd
+R53
+8C:/Users/johnn/Documents/College/EELE 466/Lab4/newtons.vhd
+FC:/Users/johnn/Documents/College/EELE 466/Lab4/newtons.vhd
 l0
 L6
 V_n^>RXbDUH>M58eTIe5=<3
 !s100 HSC<RgC6gX1M0kh2UAeoM0
-R8
+R56
 32
-Z72 !s110 1519157760
+R57
 !i10b 1
-Z73 !s108 1519157760.000000
-Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:\466\JG\Lab4\newtons.vhd|
-Z75 !s107 C:\466\JG\Lab4\newtons.vhd|
-!i113 0
+R58
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/newtons.vhd|
+!s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/newtons.vhd|
+!i113 1
 R13
 R14
 Eparallel_add
 R0
-Z76 DPx4 work 20 altera_mf_components 0 22 7hE90j]F=mKbj2C?Wm?6;0
+Z71 DPx4 work 20 altera_mf_components 0 22 7hE90j]F=mKbj2C?Wm?6;0
 R2
 R1
 R3
@@ -2981,7 +2981,7 @@ R12
 R13
 R14
 Abehaviour
-R76
+R71
 R2
 R1
 R3
@@ -3041,29 +3041,29 @@ R12
 R13
 R14
 Erom
-Z77 w1519154506
-Z78 DPx9 altera_mf 20 altera_mf_components 0 22 :YRc5<ojH^WgP]^Vezi9c1
+Z72 w1519154508
+Z73 DPx9 altera_mf 20 altera_mf_components 0 22 Sn8Ol<dGSW99iM6NfOU>g1
 R3
 R4
-R5
-Z79 8C:\466\JG\Lab4\rom.vhd
-Z80 FC:\466\JG\Lab4\rom.vhd
+R53
+Z74 8C:/Users/johnn/Documents/College/EELE 466/Lab4/rom.vhd
+Z75 FC:/Users/johnn/Documents/College/EELE 466/Lab4/rom.vhd
 l0
 L43
 VMd22FdVJm<=[Vo;Cm`OcW1
 !s100 XY44M=SFz@B^2bZSC<kcf3
-R8
-32
-R55
-!i10b 1
 R56
-Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:\466\JG\Lab4\rom.vhd|
-Z82 !s107 C:\466\JG\Lab4\rom.vhd|
-!i113 0
+32
+R57
+!i10b 1
+R58
+Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/rom.vhd|
+Z77 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/rom.vhd|
+!i113 1
 R13
 R14
 Asyn
-R78
+R73
 R3
 R4
 DEx4 work 3 rom 0 22 Md22FdVJm<=[Vo;Cm`OcW1
@@ -3071,60 +3071,57 @@ l57
 L53
 V]bfEz3Z>LiUR86SjA6Ne]2
 !s100 MMeHSh@:6Y7S2m[9OTLP00
-R8
-32
-R55
-!i10b 1
 R56
-R81
-R82
-!i113 0
+32
+R57
+!i10b 1
+R58
+R76
+R77
+!i113 1
 R13
 R14
 Ersr
-w1519157299
+Z78 w1519157300
 R1
 R2
 R3
 R4
-R5
-8C:\466\JG\Lab4\rsr.vhd
-FC:\466\JG\Lab4\rsr.vhd
+R53
+Z79 8C:/Users/johnn/Documents/College/EELE 466/Lab4/rsr.vhd
+Z80 FC:/Users/johnn/Documents/College/EELE 466/Lab4/rsr.vhd
 l0
 L6
 V6mnEngdKLP>FnYK>[_YIk0
 !s100 da8Qn;JQI1G_A5WDILl<52
-R8
+R56
 32
-R72
+R57
 !i10b 1
-R73
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:\466\JG\Lab4\rsr.vhd|
-!s107 C:\466\JG\Lab4\rsr.vhd|
-!i113 0
+R58
+Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/rsr.vhd|
+Z82 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/rsr.vhd|
+!i113 1
 R13
 R14
 Arsr_arch
-R69
 R1
 R2
 R3
 R4
 DEx4 work 3 rsr 0 22 6mnEngdKLP>FnYK>[_YIk0
-R70
-R71
-l13
-L11
-V:`8FY4d2@NeP:2]5A_GWa2
-!s100 nXjbT]8@0B9RejLPGBRZo0
-R8
+l27
+L12
+V;WG9Tg:IjTzL3NX;1@LzX1
+!s100 DHdCf;kb`DI@1e`oGCiLM0
+R56
 32
-R72
+R57
 !i10b 1
-R73
-R74
-R75
-!i113 0
+R58
+R81
+R82
+!i113 1
 R13
 R14
 Escfifo
@@ -3621,7 +3618,7 @@ R14
 Abehave
 R3
 R4
-R66
+R68
 l2257
 L2256
 Vh0?I[UD;8UlEQ8nzb?Lg_2
@@ -3637,47 +3634,43 @@ R12
 R13
 R14
 Ey0
-w1519159910
-DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-R1
-R2
+Z86 w1519759625
+Z87 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R3
 R4
-R5
-Z86 8C:\466\JG\Lab4\y0.vhd
-Z87 FC:\466\JG\Lab4\y0.vhd
+R53
+Z88 8C:/Users/johnn/Documents/College/EELE 466/Lab4/y0.vhd
+Z89 FC:/Users/johnn/Documents/College/EELE 466/Lab4/y0.vhd
 l0
-L7
-VG4KYz64ZF9Wh0Oo4ddn<Q2
-!s100 Ri`U<6C6U;BiXzk3<215L3
-R8
+L5
+VB^EP:?g<:ZRZH<G>zM?=a3
+!s100 9HWFIfPJDIWMBH<BFTlT_2
+R56
 32
-!s110 1519159914
+Z90 !s110 1519759630
 !i10b 1
-!s108 1519159914.000000
-Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:\466\JG\Lab4\y0.vhd|
-!s107 C:\466\JG\Lab4\y0.vhd|
-!i113 0
+Z91 !s108 1519759629.000000
+Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/y0.vhd|
+Z93 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/y0.vhd|
+!i113 1
 R13
 R14
 Ay0_arch
-R1
-R2
+R87
 R3
 R4
-DEx4 work 2 y0 0 22 H__SlfNUim[bYXo<aFM?03
+Z94 DEx4 work 2 y0 0 22 B^EP:?g<:ZRZH<G>zM?=a3
 l30
-L12
-V4R6RL`6PXBd]c=F9f=e1C0
-!s100 nz?=D9l5<iGARjm>A3]0;3
-R8
+L11
+VeUU<IlWmBi<Lc9=0fb8UJ1
+!s100 1]@F1GeHZWNhNHP1eMS[@2
+R56
 32
-!s110 1519159166
+R90
 !i10b 1
-!s108 1519159166.000000
-R88
-!s107 C:\466\JG\Lab4\y0.vhd|
-!i113 0
+R91
+R92
+R93
+!i113 1
 R13
 R14
-w1519159164
