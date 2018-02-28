@@ -8,7 +8,7 @@ entity newtons is
        y  : out std_logic_vector (35 downto 0));
 end entity;
 
-architecture rsr_arch of rsr is
+architecture newtons_arch of newtons is
 
   begin
 
