@@ -2,13 +2,13 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
-entity rsr is
-  port(clk            : in   std_logic;
-       rsr_in   : in   std_logic_vector (35 downto 0);
-       rsr_out : out std_logic_vector (35 downto 0));
+entity inv_sqrt is
+  port( clk	: in std_logic;
+	x	: in std_logic_vector(35 downto 0);
+	y	: out std_logic_vector(35 downto 0));
 end entity;
 
-architecture rsr_arch of rsr is
+architecture inv_sqrt_arch of inv_sqrt is
 
   component init_guess
     port( clk	: in std_logic;
@@ -22,12 +22,13 @@ architecture rsr_arch of rsr is
 	  y0	: in std_logic_vector(35 downto 0);
 	  y	: out std_logic_vector(35 downto 0));
   end component;
-  
-  signal y0_temp : std_logic_vector(35 downto 0);
+
+  signal y0_int : std_logic_vector(35 downto 0);
 
   begin
 
-    y0_map: init_guess port map (clk, rsr_in, y0_temp);
-    newtons_map: newton port map (clk, rsr_in, y0_temp, rsr_out);
+  y0 : init_guess port map (clk, x, y0_int);
+  n0 : newton port map (clk, x, y0_int, y); 
+
 
 end architecture;
