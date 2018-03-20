@@ -16,7 +16,7 @@ architecture rsr_arch of rsr is
 	  y0	: out std_logic_vector(35 downto 0));
   end component;
 
-  component newton
+  component newtons
     port( clk	: in std_logic;
 	  x	: in std_logic_vector(35 downto 0);
 	  y0	: in std_logic_vector(35 downto 0);
