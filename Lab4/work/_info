@@ -75,7 +75,7 @@ Ainv_sqrt_arch
 R1
 R2
 R3
-Z21 DEx4 work 8 inv_sqrt 0 22 i^=hc9>5n;S9@GZ159fO@3
+DEx4 work 8 inv_sqrt 0 22 i^=hc9>5n;S9@GZ159fO@3
 l28
 L11
 V??0543ib`CPML2F83>4V;3
@@ -96,8 +96,8 @@ R1
 R2
 R3
 R4
-Z22 8C:/Users/johnn/Documents/College/EELE 466/Lab4/inv_sqrt_TB.vhd
-Z23 FC:/Users/johnn/Documents/College/EELE 466/Lab4/inv_sqrt_TB.vhd
+Z21 8C:/Users/johnn/Documents/College/EELE 466/Lab4/inv_sqrt_TB.vhd
+Z22 FC:/Users/johnn/Documents/College/EELE 466/Lab4/inv_sqrt_TB.vhd
 l0
 L6
 Vz@zm4DM>Cf<1`3ZGVC?@f3
@@ -107,8 +107,8 @@ R7
 R17
 !i10b 1
 R18
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/inv_sqrt_TB.vhd|
-Z25 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/inv_sqrt_TB.vhd|
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/inv_sqrt_TB.vhd|
+Z24 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/inv_sqrt_TB.vhd|
 !i113 1
 R12
 R13
@@ -126,37 +126,37 @@ R7
 R17
 !i10b 1
 R18
+R23
 R24
-R25
 !i113 1
 R12
 R13
 Elzc
 R0
-Z26 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z27 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z25 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z26 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 R2
 R3
 R4
-Z28 8C:/Users/johnn/Documents/College/EELE 466/Lab4/lzc.vhd
-Z29 FC:/Users/johnn/Documents/College/EELE 466/Lab4/lzc.vhd
+Z27 8C:/Users/johnn/Documents/College/EELE 466/Lab4/lzc.vhd
+Z28 FC:/Users/johnn/Documents/College/EELE 466/Lab4/lzc.vhd
 l0
 L6
 VN;T<5a[A[S`1KW0<X:GiX1
 !s100 k_bD?MO;9K3<QAg>:J1EP1
 R7
 32
-R8
+Z29 !s110 1521573571
 !i10b 1
-R9
-Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/lzc.vhd|
-Z31 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/lzc.vhd|
+Z30 !s108 1521573571.000000
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/lzc.vhd|
+Z32 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/lzc.vhd|
 !i113 1
 R12
 R13
 Abehavioral
+R25
 R26
-R27
 R2
 R3
 DEx4 work 3 lzc 0 22 N;T<5a[A[S`1KW0<X:GiX1
@@ -166,11 +166,11 @@ VZ1Kj^Y>4?gZFIIGO993lC1
 !s100 >m[7J79;YN8oJ9@4mncn<0
 R7
 32
-R8
+R29
 !i10b 1
-R9
 R30
 R31
+R32
 !i113 1
 R12
 R13
@@ -180,19 +180,19 @@ R1
 R2
 R3
 R4
-Z32 8C:/Users/johnn/Documents/College/EELE 466/Lab4/newton.vhd
-Z33 FC:/Users/johnn/Documents/College/EELE 466/Lab4/newton.vhd
+Z33 8C:/Users/johnn/Documents/College/EELE 466/Lab4/newton.vhd
+Z34 FC:/Users/johnn/Documents/College/EELE 466/Lab4/newton.vhd
 l0
 L5
 VkBg7JfemHDX=jf4dB84_H1
 !s100 Vz:Zz`U;9?CX>o:jUKVcC3
 R7
 32
-Z34 !s110 1520292144
+Z35 !s110 1520292144
 !i10b 1
 R9
-Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/newton.vhd|
-Z36 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/newton.vhd|
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/newton.vhd|
+Z37 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/newton.vhd|
 !i113 1
 R12
 R13
@@ -207,79 +207,83 @@ V34AfZ6YAj7QRIkBENKK:e3
 !s100 f23mEYVEX74ECMfdk;6lY1
 R7
 32
-R34
+R35
 !i10b 1
 R9
-R35
 R36
+R37
 !i113 1
 R12
 R13
 Enewtons
-Z37 w1520280832
+Z38 w1521574146
+R26
+R25
 R1
 R2
 R3
 R4
-Z38 8C:/Users/johnn/Documents/College/EELE 466/Lab4/newtons.vhd
-Z39 FC:/Users/johnn/Documents/College/EELE 466/Lab4/newtons.vhd
+Z39 8C:/Users/johnn/Documents/College/EELE 466/Lab4/newtons.vhd
+Z40 FC:/Users/johnn/Documents/College/EELE 466/Lab4/newtons.vhd
 l0
-L5
-V@2]bW0HS74YV4JmaN;Zi92
-!s100 kMJg;G3a?gm6dfceB2;1d3
+L6
+V4N1A2G]oB^e:<[0hChX9@3
+!s100 z6HPen?Wj6NZPhOf4ik<I3
 R7
 32
-R34
+Z41 !s110 1521574152
 !i10b 1
-Z40 !s108 1520292144.000000
-Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/newtons.vhd|
-Z42 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/newtons.vhd|
+Z42 !s108 1521574152.000000
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/newtons.vhd|
+Z44 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/newtons.vhd|
 !i113 1
 R12
 R13
 Anewtons_arch
+R26
+R25
 R1
 R2
 R3
-DEx4 work 7 newtons 0 22 @2]bW0HS74YV4JmaN;Zi92
-l17
-L11
-Vg^@M[g<1Xhm2Qa3I<BFOG0
-!s100 RL@DLhDaZiDDPzakW:U0N1
+DEx4 work 7 newtons 0 22 4N1A2G]oB^e:<[0hChX9@3
+l22
+L13
+V5M`6zM@85S;3Lj6G0?Q]`1
+!s100 Q<9n1Um:oFUYnJFFg3Q3m0
 R7
 32
-R34
-!i10b 1
-R40
 R41
+!i10b 1
 R42
+R43
+R44
 !i113 1
 R12
 R13
 Erom
 R0
-Z43 DPx9 altera_mf 20 altera_mf_components 0 22 Sn8Ol<dGSW99iM6NfOU>g1
+Z45 DPx9 altera_mf 20 altera_mf_components 0 22 Sn8Ol<dGSW99iM6NfOU>g1
 R2
 R3
 R4
-Z44 8C:/Users/johnn/Documents/College/EELE 466/Lab4/rom.vhd
-Z45 FC:/Users/johnn/Documents/College/EELE 466/Lab4/rom.vhd
+Z46 8C:/Users/johnn/Documents/College/EELE 466/Lab4/rom.vhd
+Z47 FC:/Users/johnn/Documents/College/EELE 466/Lab4/rom.vhd
 l0
 L43
 V?eUBf;8BQG0EC_gVJaYb@0
 !s100 Z[SFmbFQ5cB;Nz0TaV=HV1
 R7
 32
-R34
+Z48 !s110 1521573572
 !i10b 1
-R40
-Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/rom.vhd|
-Z47 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/rom.vhd|
+Z49 !s108 1521573572.000000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/rom.vhd|
+Z51 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/rom.vhd|
 !i113 1
 R12
 R13
 Asyn
-R43
+R45
 R2
 R3
 DEx4 work 3 rom 0 22 ?eUBf;8BQG0EC_gVJaYb@0
@@ -289,33 +293,33 @@ V>1nJC9D7E9jz7^C69cO8_2
 !s100 ENzTHHfXJU7[M22=Tgi]31
 R7
 32
-R34
+R48
 !i10b 1
-R40
-R46
-R47
+R49
+R50
+R51
 !i113 1
 R12
 R13
 Ersr
-Z48 w1520291870
+Z52 w1521573721
 R1
 R2
 R3
 R4
-Z49 8C:\Users\johnn\Documents\College\EELE 466\Lab4\rsr.vhd
-Z50 FC:\Users\johnn\Documents\College\EELE 466\Lab4\rsr.vhd
+Z53 8C:/Users/johnn/Documents/College/EELE 466/Lab4/rsr.vhd
+Z54 FC:/Users/johnn/Documents/College/EELE 466/Lab4/rsr.vhd
 l0
 L5
-Vhjm=nNVm_C8H`dVML?I`d2
-!s100 3VVWOhB24VPB]5R0kL31K3
+VBNf85N<]En4@c3m]IJ?c91
+!s100 cJagX4V<aP>EbTWYTjLP_3
 R7
 32
-R34
+Z55 !s110 1521573724
 !i10b 1
-R40
-Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\johnn\Documents\College\EELE 466\Lab4\rsr.vhd|
-Z52 !s107 C:\Users\johnn\Documents\College\EELE 466\Lab4\rsr.vhd|
+Z56 !s108 1521573724.000000
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/rsr.vhd|
+Z58 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/rsr.vhd|
 !i113 1
 R12
 R13
@@ -323,40 +327,40 @@ Arsr_arch
 R1
 R2
 R3
-DEx4 work 3 rsr 0 22 hjm=nNVm_C8H`dVML?I`d2
+DEx4 work 3 rsr 0 22 BNf85N<]En4@c3m]IJ?c91
 l28
 L11
-VHIDn6ShfjWzT8SPfbj=Yh0
-!s100 6]bP[V;XQQXaKfJllfa`41
+VR;3Qf4[]Md29eljnR0cbm1
+!s100 [zSTzT@;L0<9o9KV]H?IA3
 R7
 32
-R34
+R55
 !i10b 1
-R40
-R51
-R52
+R56
+R57
+R58
 !i113 1
 R12
 R13
 Ersr_tb
-Z53 w1520291213
+Z59 w1520291213
 R1
 R2
 R3
 R4
-Z54 8C:/Users/johnn/Documents/College/EELE 466/Lab4/rsr_TB.vhd
-Z55 FC:/Users/johnn/Documents/College/EELE 466/Lab4/rsr_TB.vhd
+Z60 8C:/Users/johnn/Documents/College/EELE 466/Lab4/rsr_TB.vhd
+Z61 FC:/Users/johnn/Documents/College/EELE 466/Lab4/rsr_TB.vhd
 l0
 L5
 VbYe]YhHLO@0W9K:_K[gRZ3
 !s100 Ei^f1g@lQog@HmInid>T`2
 R7
 32
-R34
+R48
 !i10b 1
-R40
-Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/rsr_TB.vhd|
-Z57 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/rsr_TB.vhd|
+R49
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/rsr_TB.vhd|
+Z63 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/rsr_TB.vhd|
 !i113 1
 R12
 R13
@@ -371,33 +375,33 @@ V[TeYU[JH93L6aURomKkzD0
 !s100 8fQQ=h_:e07P?58;[C_TV2
 R7
 32
-R34
+R48
 !i10b 1
-R40
-R56
-R57
+R49
+R62
+R63
 !i113 1
 R12
 R13
 Ey0
-Z58 w1520287892
+Z64 w1521573473
 R1
 R2
 R3
 R4
-Z59 8C:/Users/johnn/Documents/College/EELE 466/Lab4/y0.vhd
-Z60 FC:/Users/johnn/Documents/College/EELE 466/Lab4/y0.vhd
+Z65 8C:/Users/johnn/Documents/College/EELE 466/Lab4/y0.vhd
+Z66 FC:/Users/johnn/Documents/College/EELE 466/Lab4/y0.vhd
 l0
 L5
-VEcSclRHZE;NjSI@3d=GN=1
-!s100 MPbT5bA7c5I5BCB<gnP8L3
+V6LH]1VC^QfmjZcK3gWQP]0
+!s100 03RMg[S[kZeSN`VM?`g7a1
 R7
 32
-R34
+Z67 !s110 1521573573
 !i10b 1
-R40
-Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/y0.vhd|
-Z62 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/y0.vhd|
+R49
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/johnn/Documents/College/EELE 466/Lab4/y0.vhd|
+Z69 !s107 C:/Users/johnn/Documents/College/EELE 466/Lab4/y0.vhd|
 !i113 1
 R12
 R13
@@ -405,18 +409,18 @@ Ay0_arch
 R1
 R2
 R3
-DEx4 work 2 y0 0 22 EcSclRHZE;NjSI@3d=GN=1
-l32
+DEx4 work 2 y0 0 22 6LH]1VC^QfmjZcK3gWQP]0
+l34
 L11
-VF@k88o=?>`hg<hO@nIcF>3
-!s100 9AEfdQKdf8]ZP2cf?bZS@0
+Vz3g8jIg8EB4[709447HDL2
+!s100 @>0>dnC2K<VfVZ;Dl3OzZ3
 R7
 32
-R34
+R67
 !i10b 1
-R40
-R61
-R62
+R49
+R68
+R69
 !i113 1
 R12
 R13
