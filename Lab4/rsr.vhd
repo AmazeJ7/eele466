@@ -10,7 +10,7 @@ end entity;
 
 architecture rsr_arch of rsr is
 
-  component init_guess
+  component y0
     port(clk : in  std_logic;
 	       x	 : in  std_logic_vector(35 downto 0);
 	       y0	 : out std_logic_vector(35 downto 0));
@@ -27,7 +27,7 @@ architecture rsr_arch of rsr is
 
   begin
 
-    y0_map: init_guess port map (clk, rsr_in, y0_temp);
+    y0_map: y0 port map (clk, rsr_in, y0_temp);
     newtons0_map: newtons port map (clk, rsr_in, y0_temp, newtons0);
     newtons1_map: newtons port map (clk, rsr_in, newtons0, newtons1);
     newtons2_map: newtons port map (clk, rsr_in, newtons1, newtons2);
