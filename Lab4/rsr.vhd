@@ -1,6 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
-USE ieee.numeric_std.all;
+USE ieee.NUMERIC_STD.all;
 
 entity rsr is
   port(clk     : in  std_logic;

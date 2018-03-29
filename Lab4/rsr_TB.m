@@ -22,42 +22,42 @@ Fm = fimath('RoundingMethod','Floor',...
 Nclock_edges = 7;
 Ninputs = 1000;
 
+errors = 0;
+total_error = 0;
 max_error = 0;
-min_error = 0;
-
+min_error = 2^36;
+    
 for clki=1:Ninputs
-
-    a = randi((2^17) + 1) - 1 + rand * 2^17;
-
-    input = fi(a, 0, W, F, Fm); % make the input a fixed point data type
-    expected = 1/sqrt(a);
-
-    %expected_vector = fi(expected, fixed_point_signed, fixed_word_width, fixed_point_fraction, Fm);
-    %formatted_expected.bin = expected_vector.bin;
+    
+    x_raw = randi(2^17) + rand;
+    x = fi(x_raw, 0, W, F, Fm); % make the input a fixed point data type
+    expected_raw = 1/sqrt(x_raw);
     y = fi(0, 0, 36, 18, Fm);
 
-    %in_double = double(formatted_input)
-    %expected_double = double(formatted_expected)
     for clkj=1:Nclock_edges
         % step Nclock_edges times until output is ready
-        y = step(fir_hdl, input);
-    end;
+        y = step(fir_hdl, x);
+    end
 
-    expected_formatted = fi(expected, 0, 36, 18, Fm);
-
-    if (abs(expected_formatted.data - y.data) > 0)
-        error = abs(expected_formatted.data - y.data);
+    expected = fi(expected_raw, 0, 36, 18, Fm);
+    
+    if(abs(expected.data - y.data) > 0) 
+        error = abs(expected.data - y.data);
         total_error = total_error + error;
         errors = errors + 1;
         if error > max_error
-          max_error = error;
-        elseif error < min_error
-          min_error = error;
+            max_error = error;
         end
-    end
+        if error < min_error
+            min_error = error;
+        end
+    else
+        min_error = 0;
+    end    
 end
 
-Ninputs
 max_error
 min_error
-avg_error = total_error / errors
+avg_error = total_error/Ninputs
+errors
+

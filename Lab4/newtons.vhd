@@ -21,16 +21,11 @@ architecture newtons_arch of newtons is
 
   begin
 
-    process(clk)
-      begin
-        if(rising_edge(clk)) then
-          y0_squared <= unsigned(y0) * unsigned(y0);
-          y0_mult_x <= unsigned(x) * y0_squared;
-          y0_integer <= "000000000000000000000000000000000000000000000000000011000000000000000000000000000000000000000000000000000000" - y0_mult_x;
-          y0_mult <= y0_integer * unsigned(y0);
-          y1_long <= shift_right(y0_mult, 1);
-          y1 <= y1_long(89 downto 54);
-        end if;
-    end process;
+    y0_squared <= unsigned(y0) * unsigned(y0);
+    y0_mult_x <= unsigned(x) * y0_squared;
+    y0_integer <= "000000000000000000000000000000000000000000000000000011000000000000000000000000000000000000000000000000000000" - y0_mult_x;
+    y0_mult <= y0_integer * unsigned(y0);
+    y1_long <= shift_right(y0_mult, 1);
+    y1 <= y1_long(89 downto 54);
     y <= std_logic_vector(y1);
 end architecture;
